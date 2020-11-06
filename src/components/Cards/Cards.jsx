@@ -8,7 +8,11 @@ import cx from 'classnames'
 
 const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
   if (!confirmed) {
-    return <CircularProgress />
+    return (
+      <div style={{ margin: '20px 0' }}>
+        <CircularProgress />
+      </div>
+    )
   }
 
   return (

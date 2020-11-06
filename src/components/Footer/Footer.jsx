@@ -4,12 +4,12 @@ import { Typography } from '@material-ui/core'
 
 import styles from './Footer.module.css'
 
-const Footer = () => {
+const Footer = country => {
   return (
     <div className={styles.container}>
       <Typography color='textPrimary'>Made by Ngo Quoc Doan 😷😷😷</Typography>
     </div>
-  );
+  )
 }
 
-export default Footer;
+export default Footer

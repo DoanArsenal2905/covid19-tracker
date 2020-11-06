@@ -1,7 +1,8 @@
 import React from 'react'
-import { Bar } from 'react-chartjs-2'
 
-// import { fetchDailyData } from '../../api'
+import { Bar } from 'react-chartjs-2'
+import { Typography } from '@material-ui/core'
+
 import styles from './Chart.module.css'
 
 const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
@@ -23,7 +24,9 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
         }}
       />
     ) : (
-      <div>Opps!</div>
+      <div className={styles.typo}>
+        <Typography gutterBottom>👆 Oops! You haven't selected any country! 👆</Typography>
+      </div>
     )
   )
 
